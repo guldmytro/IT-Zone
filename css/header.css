@@ -1,6 +1,6 @@
 .header {
     position: sticky;
-    top: 0;
+    top: -0.1px;
     padding: 1.6rem 0;
     font-size: 1.3rem;
     background-color: #fefeff;
@@ -218,4 +218,12 @@ a.header-cart-link img {
 .header-controls__search [type="submit"] img {
     height: 70%;
     width: auto;
+}
+
+.btn__mobile-menu {
+    display: none;
+}
+
+.mobile-menu-wrapper {
+    display: none;
 }

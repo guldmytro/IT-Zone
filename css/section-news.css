@@ -6,6 +6,12 @@
     color: var(--color-text-invert);
 }
 
+.news-slider {
+    margin-top: -0.9rem;
+    margin-right: -0.9rem;
+    margin-left: -0.9rem;
+}
+
 .news-slider__item {
     padding: 0.9rem;
 }

@@ -7,21 +7,83 @@ $(document).ready(function() {
     $('.main-banner__brands').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
     });
 
     // product sliders
     $('.top-products__slider, .latest-products__slider').slick({
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
     });
 
     // news slider
     $('.news-slider').slick({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
     });
 
     // product slider
@@ -99,6 +161,7 @@ $(document).ready(function() {
     // header-menu
     $('.header-menu_btn').click(function() {
         $(this).toggleClass('active');
+        $('.mobile-menu-wrapper').hide(150);
         $('.header-menu-wrapper').slideToggle(300);
         if (!$('.main-menu__item.active').length) {
             $('.main-menu__item:first-child').addClass('active');
@@ -110,6 +173,29 @@ $(document).ready(function() {
             $('.main-menu__item.active').removeClass('active');
             $this.addClass('active');
         }
+    });
+
+    $('.main-menu__item').click(function(e) {
+        e.preventDefault();
+        if (document.documentElement.clientWidth <= 991) {
+            $(this).find('.main-menu__sub').slideToggle(300);
+        }
+    });
+
+    $(window).resize(function() {
+        if (document.documentElement.clientWidth > 991) {
+            $('.main-menu__sub').css('display', 'block');
+            $('.mobile-menu-wrapper').hide();
+        } else {
+            $('.main-menu__sub').css('display', 'none');
+        }
+    });
+
+    $('.btn__mobile-menu').click(function(e) {
+        e.preventDefault();
+        $('.header-menu-wrapper').hide(150);
+        $('.header-menu_btn.active').removeClass('active');
+        $('.mobile-menu-wrapper').slideToggle(300);
     });
 
 }); // end ready
