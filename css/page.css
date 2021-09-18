@@ -1,7 +1,7 @@
 .page-row {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
-    grid-gap: 3rem;
+    grid-gap: 4rem;
     align-items: start;
 }
 
