@@ -219,14 +219,44 @@
 
 .tabs-header {
     margin: -1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: auto;
+    padding-bottom: 0.5rem;
+}
+
+.tabs-header::-webkit-scrollbar {
+    height: 5px;
+}
+
+.tabs-header::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, transparent 0%, transparent 2px, #33cbb7 2px, #33cbb7 3px, transparent 3px, transparent 100%);
+}
+
+.tabs-header::-webkit-scrollbar-thumb {
+    background-color: #33cbb7;
+    border-radius: 100px;
+}
+
+.tabs-header::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background-color: #33b9a7;
 }
 
 .tabs-header__item {
     border: none;
     background-color: transparent;
     color: #b1b1b1;
-    font-weight: 800;
-    margin: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+}
+
+.tabs-header__item + .tabs-header__item {
+    margin-left: 3rem;
 }
 
 .tabs-header__item.active {
@@ -234,6 +264,6 @@
 }
 
 .tabs-content {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     font-size: 1.4rem;
 }

@@ -104,12 +104,15 @@
     font-size: 2rem;
 }
 
-.cart-product__remove {
+.product-remove__wrapper {
     position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
     top: 2.5rem;
     right: 1rem;
+}
+
+.cart-product__remove {
+    width: 1.5rem;
+    height: 1.5rem;
     background: url('../img/icon-close.png') no-repeat center / 85% auto;
     border: none;
     filter: invert(54%) sepia(0%) saturate(53%) hue-rotate(188deg) brightness(93%) contrast(88%);

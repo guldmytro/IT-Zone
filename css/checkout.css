@@ -97,6 +97,7 @@
     border-radius: 1rem;
     background-color: #f3f5ff;
     margin-right: 0.8rem;
+    flex-shrink: 0;
 }
 
 .checkout-fields .checkbox__custom::before {
