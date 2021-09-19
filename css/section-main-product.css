@@ -107,6 +107,7 @@
 }
 
 .product-features__item .thumb {
+    flex-shrink: 0;
     width: 7rem;
     height: 7rem;
     background-color: #f1fbfa;
