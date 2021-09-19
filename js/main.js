@@ -198,5 +198,12 @@ $(document).ready(function() {
         $('.mobile-menu-wrapper').slideToggle(300);
     });
 
+    $('.header-filters__btn').click(function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.catalog__aside').toggleClass('active');
+        $('.products-group').toggleClass('off');
+    });
+
 }); // end ready
 

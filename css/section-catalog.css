@@ -245,3 +245,7 @@
     justify-content: center;
     margin-top: 5.5rem;
 }
+
+.header-filters__btn-wrapper {
+    display: none;
+}

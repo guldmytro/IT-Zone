@@ -28,6 +28,10 @@
         height: 6rem;
     }
 
+    .products-group {
+        column-gap: 2rem;
+    }
+
 }
 /* 1399px */
 
@@ -152,6 +156,14 @@
         white-space: nowrap;
     }
 
+    .catalog-group {
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 3fr);
+    }
+
+    .products-group {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .footer-menu {
         flex-wrap: wrap;
     }
@@ -246,6 +258,10 @@
         width: 100%;
         grid-row: 1 / span 1;
         grid-column: 1 / -1;
+    }
+
+    .article-row {
+        column-gap: 5rem;
     }
 
     .footer-subscribe {
@@ -457,9 +473,12 @@
         margin-bottom: 1rem;
     }
 
+    .breadcrumbs + *,
     main.product,
     section.contacts,
+    main.catalog,
     section.checkout,
+    section.cart,
     section.page {
         padding-top: 4rem;
     }
@@ -526,6 +545,10 @@
         margin-top: 2rem;
     }
 
+    .header-controls_s {
+        display: none;
+    }
+
     .footer-row {
         flex-flow: column nowrap;
         justify-content: center;
@@ -549,6 +572,90 @@
         margin-top: 3.5rem;
     }
 
+    .section-header_flex {
+        border-bottom: none;
+    }
+
+    .header-filters__btn-wrapper {
+        display: block;
+    }
+
+    .header-filters__btn {
+        position: relative;
+        border: none;
+        width: 5.4rem;
+        height: 3.4rem;
+        border-radius: 10rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: var(--color-accent);
+
+    }
+
+    .header-filters__btn::before {
+        position: absolute;
+        content: '';
+        display: block;
+        height: 50%;
+        width: 3rem;
+        background: url('../img/icon-filter.png') no-repeat center / contain;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+        filter: invert(1)
+    }
+
+    .catalog__aside {
+        position: absolute;
+        z-index: 2;
+        background-color: #FFF;
+        right: 0;
+        top: -2rem;
+        padding: 3rem;
+        box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+        pointer-events: none;
+        opacity: 0;
+        transform: scaleY(0);
+        transition: transform 250ms ease, opacity 250ms ease;
+        transform-origin: center top;
+    }
+
+    .products-group {
+        transition: opacity 250ms ease;
+    }
+
+    .products-group.off {
+        opacity: 0.2;
+        pointer-events: none;
+    }
+
+    .catalog__aside.active {
+        pointer-events: all;
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    .catalog-group {
+        position: relative;
+    }
+
+    .catalog__products {
+        grid-column: 1 / -1;
+    }
+
+    .products-group {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column-gap: 2rem;
+    }
+
+    .news-group {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .article-row {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
 
 }
 /* 991px */
@@ -673,6 +780,14 @@
 
     .cart-totals__label {
         margin-right: 0;
+    }
+
+    .breadcrumbs {
+        padding-bottom: 2rem;
+    }
+
+    .news-group {
+        grid-template-columns: 1fr;
     }
 
 }
@@ -807,9 +922,12 @@
         height: 5.5rem;
     }
 
+    .breadcrumbs + *,
     main.product,
     section.contacts,
+    main.catalog,
     section.checkout,
+    section.cart,
     section.page {
         padding-top: 3rem;
     }
@@ -897,6 +1015,38 @@
     .checkout-fields .checkbox__custom {
         width: 3rem;
         height: 3rem;
+    }
+
+    .catalog__aside {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .products-group {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog__aside {
+        max-width: 100%;
+    }
+
+    .catalog__show-more {
+        margin-top: 4rem;
+    }
+
+    .news-group {
+        row-gap: 3rem;
+    }
+
+    .new-item__group {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        padding-bottom: 2.5rem;
+        padding-top: 2rem;
+    }
+
+    .news-slider__item {
+        border-radius: 1rem;
     }
 
     .footer {
