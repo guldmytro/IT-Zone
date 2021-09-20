@@ -71,6 +71,12 @@
     font-size: 1.4rem;
     text-transform: uppercase;
     color: var(--color-accent-secondary);
+    transition: color 200ms, background 200ms ease;
+}
+
+.main-banner__link:hover {
+    color: var(--color-text-invert);
+    background-color: var(--color-accent-secondary);
 }
 
 .main-banner__brands {
@@ -118,6 +124,11 @@
     border: none;
     top: 50%;
     overflow: hidden;
+    transition: background 200ms;
+}
+
+.main-brands .slick-arrow:hover {
+    background-color: var(--color-accent-secondary);
 }
 
 .main-brands .slick-arrow::before,
@@ -131,6 +142,20 @@
     width: 30%;
     height: 30%;
     background: url('../img/arrow-dark.png') no-repeat center / contain;
+}
+
+.main-brands .slick-arrow::after {
+    filter: invert(1);
+    opacity: 0;
+}
+
+
+.main-brands .slick-arrow:hover::before {
+    opacity: 0;
+}
+
+.main-brands .slick-arrow:hover::after {
+    opacity: 1;
 }
 
 .main-brands .slick-prev {

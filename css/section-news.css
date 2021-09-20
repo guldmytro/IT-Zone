@@ -60,6 +60,12 @@
     height: 8rem;
     top: 50%;
     z-index: 2;
+    transition: background 200ms;
+}
+
+.news .slick-arrow::after {
+    filter: invert(1);
+    opacity: 0;
 }
 
 .news .slick-prev {
@@ -70,5 +76,17 @@
 .news .slick-next {
     right: 0;
     transform: translate(50%, -50%);
+}
+
+.news .slick-arrow:hover {
+    background-color: var(--color-accent-secondary);
+}
+
+.news .slick-arrow:hover::before {
+    opacity: 0;
+}
+
+.news .slick-arrow:hover::after {
+    opacity: 1;
 }
 

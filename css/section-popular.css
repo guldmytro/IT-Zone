@@ -95,7 +95,46 @@
     transform: scaleX(-1);
 }
 
-.top-products__slider .slick-arrow::before {
-    background-image: url('../img/arrow-color.png');
+.top-products__slider .slick-arrow,
+.latest-products__slider .slick-arrow {
+    transition: background 200ms;
 }
+
+.top-products__slider .slick-arrow:hover,
+.latest-products__slider .slick-arrow:hover {
+    background-color: var(--color-accent-third);
+
+}
+
+.top-products__slider .slick-arrow::before,
+.top-products__slider .slick-arrow::after,
+.latest-products__slider .slick-arrow::before,
+.latest-products__slider .slick-arrow::after {
+    background-image: url('../img/arrow-dark.png');
+}
+.top-products__slider .slick-arrow::before,
+.latest-products__slider .slick-arrow::before {
+    filter: invert(23%) sepia(52%) saturate(344%) hue-rotate(122deg) brightness(97%) contrast(90%);
+}
+
+.top-products__slider .slick-arrow::after,
+.latest-products__slider .slick-arrow::after {
+    filter: invert(1);
+}
+
+.top-products__slider .slick-arrow::after,
+.latest-products__slider .slick-arrow::after {
+    opacity: 0;
+}
+
+.top-products__slider .slick-arrow:hover::before,
+.latest-products__slider .slick-arrow:hover::before {
+    opacity: 0;
+}
+
+.top-products__slider .slick-arrow:hover::after,
+.latest-products__slider .slick-arrow:hover::after {
+    opacity: 1;
+}
+
 
