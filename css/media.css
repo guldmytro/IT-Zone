@@ -863,6 +863,7 @@
     }
 
     .main-banner {
+        background-position: center top;
         margin-bottom: 9rem;
     }
 
